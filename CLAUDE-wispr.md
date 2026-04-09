@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Obsidian vault — Twój Second Brain zarządzany przez Claude Code + WisprFlow.
+Obsidian vault — Twój Second Brain zarządzany przez Claude Code + Wispr Flow.
 
 <!-- ═══════════════════════════════════════════════════════════════════════
      INSTRUKCJA: Uzupełnij sekcje oznaczone [DO UZUPEŁNIENIA].
@@ -26,10 +26,10 @@ Przed każdym zadaniem: **CZYTAJ istniejące pliki NAJPIERW**. Przed tworzeniem 
 
 <!-- Opisz strukturę folderów w swoim vaultcie.
      Claude musi wiedzieć co gdzie trafia, żeby nie tworzyć bałaganu.
-     Poniżej przykład z Ideaverse (inbox WisprFlow) — dostosuj do swojego vaulta. -->
+     Poniżej przykład z Ideaverse (inbox Wispr Flow) — dostosuj do swojego vaulta. -->
 
 ```
-Ideaverse/             # Inbox — WisprFlow voice notes wpadają tutaj automatycznie
+Ideaverse/             # Inbox — Wispr Flow voice notes wpadają tutaj automatycznie
 ├── Archive/           # Zarchiwizowane po przetworzeniu (READ-ONLY)
 
 Concepts/              # Insighty, frameworki, concept notes
@@ -58,9 +58,9 @@ tags.md                # Jedyne źródło prawdy dla tagów
 - Research/analizy: `AI_Zone/YYYY-MM-DD_temat.md`
 - Content ideas: `Content/YYYY-MM-DD_temat.md`
 
-## WisprFlow Auto-Export
+## Wispr Flow Auto-Export
 
-Voice notes z WisprFlow → automatycznie do Ideaverse/ przez launchd.
+Voice notes z Wispr Flow → automatycznie do Ideaverse/ przez launchd.
 
 - **Skrypt:** `.claude/scripts/wispr_export.py`
 - **Wrapper:** `~/.local/bin/wispr-export-run.sh`
@@ -70,7 +70,7 @@ Voice notes z WisprFlow → automatycznie do Ideaverse/ przez launchd.
 - **Logi Pythona:** `.claude/scripts/.wispr-export.log`
 - **State:** `.claude/scripts/.wispr-state.json`
 - **Idempotentny:** skrypt sprawdza `modifiedAt` w state — wielokrotne odpalenie nie duplikuje notatek
-- **Nie kasuje plików:** usunięcie notatki w WisprFlow NIE kasuje pliku z Ideaverse
+- **Nie kasuje plików:** usunięcie notatki w Wispr Flow NIE kasuje pliku z Ideaverse
 
 Setup: patrz `wispr-flow/` w tym repo.
 
@@ -82,7 +82,7 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.wispr-export.pl
 
 ## Quarantine Architecture
 
-- **Ideaverse/** → Inbox. Notatki głosowe z WisprFlow wpadają automatycznie.
+- **Ideaverse/** → Inbox. Notatki głosowe z Wispr Flow wpadają automatycznie.
   - Wartościowa treść jest **krystalizowana** do structured notes (Concepts/, Content/, Projects/).
   - Po przetworzeniu surowe notatki → **Ideaverse/Archive/**.
   - **Archiwizacja TYLKO z wyraźnym potwierdzeniem** — nigdy autonomicznie.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-WisprFlow Notes → Obsidian exporter.
+Wispr Flow Notes → Obsidian exporter.
 
-Eksportuje notatki z bazy SQLite WisprFlow jako pliki .md z YAML front matter
+Eksportuje notatki z bazy SQLite Wispr Flow jako pliki .md z YAML front matter
 do folderu Inbox w Obsidian vault.
 Uruchamiany automatycznie przez launchd (WatchPaths) lub ręcznie.
 
@@ -28,7 +28,7 @@ from pathlib import Path
 
 # ── Config ── ZMIEŃ NA SWOJE ŚCIEŻKI ────────────────────────────────────────
 
-# Baza danych WisprFlow (domyślna lokalizacja na macOS)
+# Baza danych Wispr Flow (domyślna lokalizacja na macOS)
 DB_PATH = Path.home() / "Library" / "Application Support" / "Wispr Flow" / "flow.sqlite"
 
 # Ścieżka do Twojego Obsidian vaulta
@@ -36,7 +36,7 @@ DB_PATH = Path.home() / "Library" / "Application Support" / "Wispr Flow" / "flow
 # Przykład lokalny: Path.home() / "Documents" / "MojVault"
 VAULT_DIR = Path.home() / "ZMIEN" / "SCIEZKE" / "DO" / "VAULTA"  # ← ZMIEŃ!
 
-# Folder docelowy na notatki z WisprFlow (inbox)
+# Folder docelowy na notatki z Wispr Flow (inbox)
 OUTPUT_DIR = VAULT_DIR / "Ideaverse"  # ← ZMIEŃ jeśli Twój inbox ma inną nazwę
 
 # Folder na skrypty, state i logi (nie ruszaj jeśli nie musisz)
@@ -178,11 +178,11 @@ def export_notes() -> None:
         for note in notes:
             note_id = note["id"]
 
-            # Usunięte notatki w WisprFlow → NIE kasuj pliku
+            # Usunięte notatki w Wispr Flow → NIE kasuj pliku
             # Plik zostaje — Ty decydujesz co z nim zrobić
             if note["isDeleted"]:
                 if note_id in state:
-                    log.info(f"Usunięto w WisprFlow, plik zostaje: {state[note_id]['filename']}")
+                    log.info(f"Usunięto w Wispr Flow, plik zostaje: {state[note_id]['filename']}")
                 continue
 
             active_ids.add(note_id)
@@ -214,7 +214,7 @@ def export_notes() -> None:
         # Notatki które zniknęły z bazy → NIE kasuj plików
         orphaned = set(state.keys()) - active_ids
         for orphan_id in orphaned:
-            log.info(f"Notatka zniknęła z WisprFlow, plik zostaje: {state[orphan_id]['filename']}")
+            log.info(f"Notatka zniknęła z Wispr Flow, plik zostaje: {state[orphan_id]['filename']}")
 
         save_state(state)
 

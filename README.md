@@ -15,7 +15,7 @@ Sklonuj repo, otwórz Claude Code w folderze swojego vaulta i wpisz:
 /setup
 ```
 
-Claude przeprowadzi Cię przez instalację krok po kroku — zapyta kim jesteś, jaki język, czy używasz WisprFlow, i sam skopiuje wszystkie pliki na miejsce.
+Claude przeprowadzi Cię przez instalację krok po kroku — zapyta kim jesteś, jaki język, czy używasz Wispr Flow, i sam skopiuje wszystkie pliki na miejsce.
 
 > Wymaga sklonowania tego repo obok vaulta, żeby Claude miał dostęp do szablonów.
 
@@ -29,7 +29,7 @@ Jeśli wolisz zrobić to sam:
 cp CLAUDE.md /ścieżka/do/twojego/vaulta/.claude/CLAUDE.md
 ```
 
-> Jeśli używasz WisprFlow — weź `CLAUDE-wispr.md` zamiast `CLAUDE.md` (ma dodatkowe sekcje o auto-eksporcie voice notes).
+> Jeśli używasz Wispr Flow — weź `CLAUDE-wispr.md` zamiast `CLAUDE.md` (ma dodatkowe sekcje o auto-eksporcie voice notes).
 
 ### 2. Uzupełnij sekcje `[DO UZUPEŁNIENIA]`
 
@@ -59,9 +59,9 @@ Claude automatycznie przeczyta `CLAUDE.md` i będzie wiedział jak pracować z T
 
 ---
 
-## WisprFlow Setup (opcjonalnie)
+## Wispr Flow Setup (opcjonalnie)
 
-Jeśli używasz [WisprFlow](https://wisprflow.ai/r?ROBERT4265) do voice notes, możesz ustawić automatyczny eksport notatek głosowych do Obsidian.
+Jeśli używasz [Wispr Flow](https://wisprflow.ai/r?ROBERT4265) do voice notes, możesz ustawić automatyczny eksport notatek głosowych do Obsidian.
 
 ### 1. Skopiuj skrypt do vaulta
 
@@ -96,7 +96,7 @@ cp wispr-flow/com.user.wispr-export.plist ~/Library/LaunchAgents/
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.wispr-export.plist
 ```
 
-Od teraz voice notes z WisprFlow będą automatycznie pojawiać się w Twoim vaultcie co 15 minut (lub natychmiast po zapisaniu nowej notatki).
+Od teraz voice notes z Wispr Flow będą automatycznie pojawiać się w Twoim vaultcie co 15 minut (lub natychmiast po zapisaniu nowej notatki).
 
 ### Troubleshooting
 
@@ -119,20 +119,20 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.wispr-export.pl
 | Plik | Opis |
 |------|------|
 | `CLAUDE.md` | Szablon bazowy — Obsidian + Claude Code |
-| `CLAUDE-wispr.md` | Szablon rozszerzony — z sekcją WisprFlow |
+| `CLAUDE-wispr.md` | Szablon rozszerzony — z sekcją Wispr Flow |
 | `tags.md` | Starter kit tagów |
-| `wispr-flow/wispr_export.py` | Skrypt eksportu WisprFlow → Obsidian |
+| `wispr-flow/wispr_export.py` | Skrypt eksportu Wispr Flow → Obsidian |
 | `wispr-flow/wispr-export-run.sh` | Wrapper shell (omija problem ze spacjami w ścieżkach iCloud) |
 | `wispr-flow/com.user.wispr-export.plist` | Szablon LaunchAgent dla macOS |
 | `.claude/commands/setup.md` | Komenda `/setup` — automatyczna instalacja |
 
 ## FAQ
 
-**Czy muszę używać WisprFlow?**
-Nie. `CLAUDE.md` (bazowy) działa bez WisprFlow. WisprFlow to opcjonalny dodatek.
+**Czy muszę używać Wispr Flow?**
+Nie. `CLAUDE.md` (bazowy) działa bez Wispr Flow. Wispr Flow to opcjonalny dodatek.
 
 **Czy to działa na Windows/Linux?**
-`CLAUDE.md` i `tags.md` — tak, działają wszędzie. Skrypt WisprFlow i LaunchAgent — tylko macOS (WisprFlow jest na macOS).
+`CLAUDE.md` i `tags.md` — tak, działają wszędzie. Skrypt Wispr Flow i LaunchAgent — tylko macOS (Wispr Flow jest na macOS).
 
 **Mogę zmienić strukturę folderów?**
 Tak — dostosuj sekcję "Vault Structure" w `CLAUDE.md` do swojego vaulta. Claude przeczyta ją i dostosuje się.

@@ -13,7 +13,7 @@
         <string>/Users/TWOJ_USER/.local/bin/wispr-export-run.sh</string>
     </array>
 
-    <!-- Obserwuj zmiany w bazie WisprFlow -->
+    <!-- Obserwuj zmiany w bazie Wispr Flow -->
     <key>WatchPaths</key>
     <array>
         <string>/Users/TWOJ_USER/Library/Application Support/Wispr Flow/flow.sqlite</string>

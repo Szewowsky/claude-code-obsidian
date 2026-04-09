@@ -9,10 +9,10 @@ Zainstaluj szablon Second Brain w bieżącym Obsidian vaultcie.
 2. Zapytaj użytkownika:
    - Jak się nazywasz i czym się zajmujesz? (do sekcji Persona)
    - W jakim języku mam z Tobą rozmawiać?
-   - Czy używasz WisprFlow do voice notes?
+   - Czy używasz Wispr Flow do voice notes?
 
 3. Skopiuj odpowiedni szablon:
-   - Jeśli WisprFlow: skopiuj zawartość `CLAUDE-wispr.md` z tego repo
+   - Jeśli Wispr Flow: skopiuj zawartość `CLAUDE-wispr.md` z tego repo
    - Jeśli nie: skopiuj zawartość `CLAUDE.md` z tego repo
    - Zapisz jako `.claude/CLAUDE.md` w vaultcie (stwórz folder `.claude/` jeśli nie istnieje)
 
@@ -24,7 +24,7 @@ Zainstaluj szablon Second Brain w bieżącym Obsidian vaultcie.
 
 6. Sprawdź strukturę folderów vaulta i dostosuj sekcję "Vault Structure" w CLAUDE.md do tego co faktycznie istnieje.
 
-7. Jeśli użytkownik wybrał WisprFlow:
+7. Jeśli użytkownik wybrał Wispr Flow:
    - Skopiuj `wispr_export.py` do `.claude/scripts/`
    - Zapytaj o ścieżkę do vaulta i uzupełnij `VAULT_DIR` i `OUTPUT_DIR` w skrypcie
    - Skopiuj wrapper do `~/.local/bin/wispr-export-run.sh` i uzupełnij ścieżkę
