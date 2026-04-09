@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- ZMIEŃ "user" na swoją nazwę użytkownika w Label i ścieżkach poniżej -->
+
+    <key>Label</key>
+    <string>com.user.wispr-export</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Ścieżka do wrapper scriptu — skopiuj go do ~/.local/bin/ -->
+        <string>/Users/TWOJ_USER/.local/bin/wispr-export-run.sh</string>
+    </array>
+
+    <!-- Obserwuj zmiany w bazie WisprFlow -->
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/TWOJ_USER/Library/Application Support/Wispr Flow/flow.sqlite</string>
+        <string>/Users/TWOJ_USER/Library/Application Support/Wispr Flow/flow.sqlite-wal</string>
+    </array>
+
+    <!-- Backup: odpal co 15 minut gdyby WatchPaths nie złapał zmiany -->
+    <key>StartInterval</key>
+    <integer>900</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Logi — MUSZĄ być w lokalnej ścieżce, nie na iCloud! -->
+    <key>StandardOutPath</key>
+    <string>/Users/TWOJ_USER/Library/Logs/wispr-export.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/TWOJ_USER/Library/Logs/wispr-export.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>
