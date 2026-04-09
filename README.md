@@ -1,6 +1,6 @@
 # Claude Code + Obsidian — Szablon Second Brain
 
-Gotowy szablon `CLAUDE.md` do pracy z Obsidian vaultem przez [Claude Code](https://claude.ai/claude-code).
+Gotowy szablon `CLAUDE.md` do pracy z Obsidian vaultem przez [Claude Code](https://claude.com/product/claude-code).
 
 Claude Code czyta `CLAUDE.md` z roota vaulta i na tej podstawie wie:
 - jak tworzyć i formatować notatki (wikilinki, tagi, struktura)
