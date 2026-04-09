@@ -61,7 +61,7 @@ Claude automatycznie przeczyta `CLAUDE.md` i będzie wiedział jak pracować z T
 
 ## WisprFlow Setup (opcjonalnie)
 
-Jeśli używasz [WisprFlow](https://wisprflow.com/) do voice notes, możesz ustawić automatyczny eksport notatek głosowych do Obsidian.
+Jeśli używasz [WisprFlow](https://wisprflow.ai/r?ROBERT4265) do voice notes, możesz ustawić automatyczny eksport notatek głosowych do Obsidian.
 
 ### 1. Skopiuj skrypt do vaulta
 
